@@ -234,61 +234,62 @@ footer {
 
 /* DISEÑO DE LA PAGINA "SOBRE MI" */
 
-/* diseño de la biografía */
+/* No puedo lograr centrar las cosas, por ejemplo: quiero hacer uso del "." para poder indicar que ahi va un espacio vacio (grid-template-areas: "img ." "img1 p1") y se me desconfigura todo */
 
-/* El rectángulo contenedor */
-.tarjeta-perfil {
-    background-color: #ffffff;
-    max-width: 800px;             /* Ancho máximo para que no se estire de más */
-    margin: 40px auto;            /* Centra la tarjeta horizontalmente */
-    padding: 30px;                /* Espacio interno entre el borde y el contenido */
-    border-radius: 12px;          /* Esquinas redondeadas */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para darle relieve */
-    
-    /* Distribución con Flexbox */
-    display: flex;
-    align-items: center;          /* Centra la foto y el texto verticalmente */
-    gap: 30px;                    /* Separación entre la imagen y el texto */
+
+.sobremi-grid {
+    display: grid;
+    grid-template-areas: 
+        "img1 p1"
+        "img1 sub1"
+        "p2 img2"
+        "sub2  img2"
+        ;
+    justify-items: center;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 30px;
+    padding: 150px 35px;
 }
 
-/* La imagen de perfil */
-.foto-perfil {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;            /* Evita que la foto se deforme */
-    border-radius: 50%;           /* La hace circular (si preferís cuadrada con esquinas suaves, cambiá a 8px) */
-    flex-shrink: 0;               /* Evita que la imagen se achique si el texto es largo */
+.foto-perfil-grid {
+    grid-area: img1;
+    width: 600px;
+    border-radius: 50px;
+
 }
 
-/* El texto de la biografía */
-.bio-perfil h2 {
-    font-family: 'Domine', sans-serif;
-    margin-top: 0;
-    margin-bottom: 12px;
-    color: #222222;
+.text1-grid {
+    font-family: Domine, sans-serif;
+    font-size: 50px;
+    grid-area: p1;
 }
 
-.bio-perfil p {
-    font-family: 'Domine', sans-serif;
-    color: #000000;
-    line-height: 1.6;             /* Altura de línea para mejorar la lectura */
-    margin-bottom: 10px;
+.sub-text1-grid {
+    font-size: 20px;
+    font-family: Domine, sans-serif;
+    grid-area: sub1;
 }
 
-.logo-sobre-mi {
-    display: block;               /* Permite que responda al margin auto */
-    margin: 20px auto;            /* Centra la imagen horizontalmente y agrega espacio arriba y abajo */
-    height: 150px;
-    width: auto;                  /* Mantiene la proporción de la imagen */
+.perchero-grid {
+    border-radius: 50px;
+    grid-area: img2;
+    width: 800px;
 }
 
-.logo-sobre-mi-texto {
-    font-family: 'Domine', sans-serif; /* Fuente consistente con el resto del sitio */
-    text-align: center;           /* Centra el texto debajo del logo */
-    font-size: 16px;              /* Tamaño de fuente adecuado */
-    color: #333333;               /* Color del texto */
-    margin-top: 8px;              /* Espacio entre el logo y el texto */
+.texto-grid {
+    font-family: Domine, sans-serif;
+    grid-area: p2;
 }
+
+.sub-text2-grid {
+    font-size: 20px;
+    font-family: Domine, sans-serif;
+    grid-area: sub2;
+}
+
+
+
 
 /* DISEÑO DE LA PAGINA "CONTACTANOS" */
 
@@ -404,4 +405,9 @@ footer {
     justify-content: center;
     padding: 10px;
 }
+
+
+/* MEDIA QUERIES */
+
+
 
