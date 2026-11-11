@@ -409,5 +409,21 @@ footer {
 
 /* MEDIA QUERIES */
 
+/* TABLET */
+
+@media (min-width: 568px) and (max-width:991px) {
+
+}
+
+/* MOBILE */
+
+@media (min-width: 300px) and (max-width:567px) {
+
+    header {
+        flex-direction: column;
+    }
+
+}
+
 
 
